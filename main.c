@@ -17,7 +17,6 @@ pLivro livro_aloc(int qtde) {
 
 void livro_ler(pLivro livros, int qtde) {
     for (int i = 0; i < qtde; i++) {
-
         scanf(" %[^\n]", livros[i].nome);
         scanf(" %[^\n]", livros[i].isbn);
         scanf("%f", &livros[i].preco);
@@ -45,6 +44,11 @@ int main() {
     int qtde;
 
     scanf("%d", &qtde);
+
+    if (qtde == 0) {
+        printf("Sem livros\n");
+        return 0;
+    }
 
     pLivro livros = livro_aloc(qtde);
 
