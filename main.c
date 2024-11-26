@@ -17,24 +17,12 @@ pLivro livro_aloc(int qtde) {
 
 void livro_ler(pLivro livros, int qtde) {
     for (int i = 0; i < qtde; i++) {
-        printf("Livro %d:\n", i + 1);
-        
-        printf("Nome: ");
+
         scanf(" %[^\n]", livros[i].nome);
-
-        printf("ISBN: ");
         scanf(" %[^\n]", livros[i].isbn);
-
-        printf("Preço: ");
         scanf("%f", &livros[i].preco);
-
-        printf("Score (0-10): ");
         scanf("%d", &livros[i].score);
-
-        printf("Editora: ");
         scanf(" %[^\n]", livros[i].editora);
-
-        printf("\n");
     }
 }
 
